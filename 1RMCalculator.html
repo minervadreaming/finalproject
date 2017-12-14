@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1 Rep Max and Percentages Calculator</title>
+    <!--Google Fonts-->
+    <link href='http://fonts.googleapis.com/css?family=Yanone+Kaffeesatz:300,400' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto:300' rel='stylesheet' type='text/css'>
+    <!--JQuery-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <!--Local JS-->
+    <script type="text/javascript" src="script.js"></script>
+    <!--Local CSS-->
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+
+<div class="mainContainer">
+    <div class="headerSection">
+        <h2>1 Rep Max and Percentages Calculator</h1>
+        <p>Your 1 Rep Max is the most weight that you can lift for any given movement.  From this number you can also determine percentages for lifting in other workouts and repetition ranges.</p>
+    </div>
+
+    <hr>
+
+    <div class="calcContainer">
+        <div id="entryDiv">
+            <span id="weight">Weight lifted: <input type="number" name="weight" id="weightInput"></span> 
+            <span id="reps">Reps: <select name="reps" id="repsPulldown"></select></span> <!-- use JQuery to insert options -->
+            <br>
+            <div id="movement">
+                <span id="movementName">Movement: <select name="movement" id="movementPulldown">
+                        <option val=""></option>
+                        <option val="deadlift">Deadlift</option>
+                        <option val="benchpress">Bench Press</option>
+                        <option val="backsquat">Back Squat</option>
+                        <option val="frontsquat">Front Squat</option>
+                        <option val="ohsquat">Overhead Squat</option>
+                        <option val="thruster">Thruster</option>
+                        <option val="clean">Clean</option>
+                        <option val="powerclean">Power Clean</option>
+                        <option val="hangclean">Hang Clean</option>
+                        <option val="cj">Clean and Jerk</option>
+                        <option val="jerk">Jerk</option>
+                        <option val="splitjerk">Split Jerk</option>
+                        <option val="pushpress">Push Press</option>
+                        <option val="strictpress">Strict Press</option>
+                        <option val="pushjerk">Push Jerk</option>
+                        <option val="powersnatch">Power Snatch</option>
+                        <option val="squatsnatch">Squat Snatch</option>
+                </select></span>
+            </div>
+            <button id="calcBtn" class="button disabled" disabled type="button">Calculate</button>
+            <button id="clrBtn" class="button" type="button">Clear</button>
+        </div>
+        <div id="1rmDisplay">
+            <h3>Your 1 Rep Max is: <span id="1rm"></span></h3>
+        </div>
+        <hr>
+        <div id="percContainer" class="percHidden">
+            <div class="percRow percRowHide">
+                <span class="percHeader">95% 1 Rep Max</span>
+                <span class="percHeader percHeaderRight">90% 1 Rep Max</span>
+                <div class="percBoxes">
+                    <input type="number" id="perc95" readonly class="percBox">
+                    <input type="number" id="perc90"readonly class="percBox percBoxRight">
+                </div>
+            </div> 
+            <div class="percRow percRowHide">
+                <span class="percHeader">85% 1 Rep Max</span>
+                <span class="percHeader percHeaderRight">80% 1 Rep Max</span>
+                <div class="percBoxes">
+                    <input type="number" id="perc85" readonly class="percBox">
+                    <input type="number" id="perc80" readonly class="percBox percBoxRight">
+                </div>
+            </div> 
+            <div class="percRow percRowHide">
+                <span class="percHeader">75% 1 Rep Max</span>
+                <span class="percHeader percHeaderRight">70% 1 Rep Max</span>
+                <div class="percBoxes">
+                    <input type="number" id="perc75" readonly class="percBox">
+                    <input type="number" id="perc70" readonly class="percBox percBoxRight">
+                </div>
+            </div> 
+            <div class="percRow percRowHide">
+                <span class="percHeader">65% 1 Rep Max</span>
+                <span class="percHeader percHeaderRight">60% 1 Rep Max</span>
+                <div class="percBoxes">
+                    <input type="number" id="perc65" readonly class="percBox">
+                    <input type="number" id="perc60" readonly class="percBox percBoxRight">
+                </div>
+            </div> 
+            <div class="percRow percRowHide percRowLast">
+                <span class="percHeader">55% 1 Rep Max</span>
+                <span class="percHeader percHeaderRight">50% 1 Rep Max</span>
+                <div class="percBoxes">
+                    <input type="number" id="perc55" readonly class="percBox">
+                    <input type="number" id="perc50" readonly class="percBox percBoxRight">
+                </div>
+            </div> 
+        </div>
+        <div id="movementContainer" class="mvmntHidden">
+            <iframe id="movementFrame" width="560" height="315" src="" frameborder="0" gesture="media" allow="encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
